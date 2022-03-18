@@ -11,15 +11,13 @@ class GildedRose {
         for (Item item : items) {
             if (item.name.equals("Aged Brie")) {
                 updateAgedBrie(item);
+                updateSellIn(item);
             } else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                 updateBackstagePasses(item);
+                updateSellIn(item);
             } else if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
             } else {
                 updateOrdinaryItem(item);
-            }
-
-            if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
-            } else {
                 updateSellIn(item);
             }
 
