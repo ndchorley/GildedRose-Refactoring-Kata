@@ -18,7 +18,8 @@ class GildedRose {
                 updateForOrdinaryItem(item);
             }
 
-            if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
+            if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
+            } else {
                 item.sellIn = item.sellIn - 1;
             }
 
