@@ -17,9 +17,7 @@ class GildedRose {
                 updateForBackstagePasses(item);
             } else if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
             } else {
-                if (item.quality > 0) {
-                    item.quality = item.quality - 1;
-                }
+                updateForOrdinaryItem(item);
             }
 
             if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
@@ -43,6 +41,12 @@ class GildedRose {
                     }
                 }
             }
+        }
+    }
+
+    private void updateForOrdinaryItem(Item item) {
+        if (item.quality > 0) {
+            item.quality = item.quality - 1;
         }
     }
 
