@@ -14,4 +14,8 @@ public class UpdatableItem extends Item {
     public void updateSellIn() {
         this.sellIn = this.sellIn - 1;
     }
+
+    public void updateAfterSellByDate() {
+        this.update();
+    }
 }
