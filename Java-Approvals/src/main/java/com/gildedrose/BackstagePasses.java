@@ -1,10 +1,11 @@
 package com.gildedrose;
 
-public class BackstagePasses extends Item {
+public class BackstagePasses extends UpdatableItem {
     public BackstagePasses(int sellIn, int quality) {
         super("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
     }
 
+    @Override
     public void update() {
         if (this.quality < 50) {
             this.quality = this.quality + 1;
