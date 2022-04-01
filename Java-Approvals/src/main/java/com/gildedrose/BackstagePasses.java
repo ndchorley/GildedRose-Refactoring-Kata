@@ -25,7 +25,7 @@ public class BackstagePasses extends UpdatableItem {
     }
 
     @Override
-    public void updateAfterSellByDate() {
+    protected void updateAfterSellByDate() {
         this.quality = 0;
     }
 }

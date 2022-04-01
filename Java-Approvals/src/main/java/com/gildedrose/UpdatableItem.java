@@ -21,11 +21,11 @@ public class UpdatableItem extends Item {
         }
     }
 
-    public void updateSellIn() {
+    protected void updateSellIn() {
         this.sellIn = this.sellIn - 1;
     }
 
-    public void updateAfterSellByDate() {
+    protected void updateAfterSellByDate() {
         updateQuality();
     }
 }
