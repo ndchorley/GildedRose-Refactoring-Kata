@@ -9,7 +9,7 @@ public class UpdatableItem extends Item {
         updateQuality();
     }
 
-    private void updateQuality() {
+    protected void updateQuality() {
         if (this.quality > 0) {
             this.quality = this.quality - 1;
         }
@@ -20,6 +20,6 @@ public class UpdatableItem extends Item {
     }
 
     public void updateAfterSellByDate() {
-        this.update();
+        updateQuality();
     }
 }

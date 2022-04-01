@@ -6,7 +6,7 @@ public class AgedBrie extends UpdatableItem {
     }
 
     @Override
-    public void update() {
+    protected void updateQuality() {
         if (this.quality < 50) {
             this.quality = this.quality + 1;
         }
