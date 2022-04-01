@@ -13,7 +13,7 @@ class GildedRose {
                 ((AgedBrie)item).update();
                 updateSellIn(item);
             } else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                updateBackstagePasses(item);
+                ((BackstagePasses)item).update();
                 updateSellIn(item);
             } else if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
             } else {
@@ -41,24 +41,6 @@ class GildedRose {
     private void updateOrdinaryItem(Item item) {
         if (item.quality > 0) {
             item.quality = item.quality - 1;
-        }
-    }
-
-    private void updateBackstagePasses(Item item) {
-        if (item.quality < 50) {
-            item.quality = item.quality + 1;
-
-            if (item.sellIn < 11) {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-                }
-            }
-
-            if (item.sellIn < 6) {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-                }
-            }
         }
     }
 
