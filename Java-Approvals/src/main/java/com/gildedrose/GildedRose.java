@@ -25,7 +25,7 @@ class GildedRose {
                 if (item.name.equals("Aged Brie")) {
                     updateAgedBrie(item);
                 } else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                    item.quality = 0;
+                    updateBackstagePassesAfterSellByDate(item);
                 } else if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
                 } else {
                     updateOrdinaryItem(item);
@@ -66,5 +66,9 @@ class GildedRose {
                 }
             }
         }
+    }
+
+    private void updateBackstagePassesAfterSellByDate(Item item) {
+        item.quality = 0;
     }
 }
