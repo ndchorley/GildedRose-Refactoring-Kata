@@ -10,8 +10,8 @@ class GildedRose {
     public void updateQuality() {
         for (Item item : items) {
             UpdatableItem updatableItem = (UpdatableItem)item;
-            (updatableItem).update();
-            (updatableItem).updateSellIn();
+            updatableItem.update();
+            updatableItem.updateSellIn();
 
             if (item.sellIn < 0) {
                 updatableItem.updateAfterSellByDate();
