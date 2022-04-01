@@ -7,6 +7,12 @@ public class UpdatableItem extends Item {
 
     public void update() {
         updateQuality();
+
+        updateSellIn();
+
+        if (this.sellIn < 0) {
+            updateAfterSellByDate();
+        }
     }
 
     protected void updateQuality() {
