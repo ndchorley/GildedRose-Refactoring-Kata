@@ -15,7 +15,7 @@ public class Program {
 				new BackstagePasses(10, 49),
 				new BackstagePasses(5, 49),
 				// this conjured item does not work properly yet
-				new UpdatableItem("Conjured Mana Cake", 3, 6) };
+				new ConjuredItem("Conjured Mana Cake", 3, 6) };
 
 		GildedRose app = new GildedRose(items);
 
