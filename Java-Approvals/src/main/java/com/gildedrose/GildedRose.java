@@ -14,7 +14,7 @@ class GildedRose {
                 updateSellIn(item);
             } else if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
             } else {
-                updateOrdinaryItem(item);
+                ((UpdatableItem)item).update();
                 updateSellIn(item);
             }
 
@@ -25,7 +25,7 @@ class GildedRose {
                     updateBackstagePassesAfterSellByDate(item);
                 } else if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
                 } else {
-                    updateOrdinaryItem(item);
+                    ((UpdatableItem)item).update();
                 }
             }
         }
@@ -35,11 +35,6 @@ class GildedRose {
         item.sellIn = item.sellIn - 1;
     }
 
-    private void updateOrdinaryItem(Item item) {
-        if (item.quality > 0) {
-            item.quality = item.quality - 1;
-        }
-    }
 
     private void updateBackstagePassesAfterSellByDate(Item item) {
         item.quality = 0;

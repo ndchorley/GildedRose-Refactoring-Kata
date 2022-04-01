@@ -5,5 +5,9 @@ public class UpdatableItem extends Item {
         super(name, sellIn, quality);
     }
 
-    public void update() {}
+    public void update() {
+        if (this.quality > 0) {
+            this.quality = this.quality - 1;
+        }
+    }
 }
