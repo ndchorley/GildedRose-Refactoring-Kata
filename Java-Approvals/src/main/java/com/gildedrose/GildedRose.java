@@ -9,8 +9,9 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            ((UpdatableItem)item).update();
-            ((UpdatableItem)item).updateSellIn();
+            UpdatableItem updatableItem = (UpdatableItem)item;
+            (updatableItem).update();
+            (updatableItem).updateSellIn();
 
             if (item.sellIn < 0) {
                 if (item.name.equals("Aged Brie")) {
