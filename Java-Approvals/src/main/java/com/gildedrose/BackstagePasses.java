@@ -23,4 +23,9 @@ public class BackstagePasses extends UpdatableItem {
             }
         }
     }
+
+    @Override
+    public void updateAfterSellByDate() {
+        this.quality = 0;
+    }
 }
