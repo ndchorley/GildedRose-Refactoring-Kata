@@ -10,4 +10,8 @@ public class UpdatableItem extends Item {
             this.quality = this.quality - 1;
         }
     }
+
+    public void updateSellIn() {
+        this.sellIn = this.sellIn - 1;
+    }
 }

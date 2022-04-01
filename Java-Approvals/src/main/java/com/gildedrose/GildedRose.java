@@ -12,7 +12,7 @@ class GildedRose {
             if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
             } else {
                 ((UpdatableItem)item).update();
-                updateSellIn(item);
+                ((UpdatableItem)item).updateSellIn();
             }
 
             if (item.sellIn < 0) {
@@ -27,11 +27,6 @@ class GildedRose {
             }
         }
     }
-
-    private void updateSellIn(Item item) {
-        item.sellIn = item.sellIn - 1;
-    }
-
 
     private void updateBackstagePassesAfterSellByDate(Item item) {
         item.quality = 0;
